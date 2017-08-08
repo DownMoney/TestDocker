@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - '8080:80'
+    environment:
+      NODE_ENV: development
+
+  api:
+    build: ./api
+    container_name: api
+    ports:
+      - '3050:3050'
+    environment:
+      RAILS_ENV: development
